@@ -15,7 +15,7 @@ def funcDetails(func):
 
     return innerFunc
 
-@funcDetails
+@decorator
 def arithmetic(one:int,two:int):
     print(one**two+two**one)
 
