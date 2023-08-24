@@ -8,7 +8,14 @@ def decorator(func):
     
     return innerFun
 
-@decorator
+def funcDetails(func):
+    def innerFunc(*args,**kwargs):
+        print(dir(func))
+        func()
+
+    return innerFunc
+
+@funcDetails
 def arithmetic(one:int,two:int):
     print(one**two+two**one)
 
